@@ -28,7 +28,7 @@
 <h2>New Book</h2>
 
 <% if @book.errors.any? %>
-  <%= @book.errors.count %>errors prohibited this book from being saved:
+  <%= @book.errors.count %>errors prohibited this book from being saved
   <ul>
     <% @book.errors.full_messages.each do |message| %>
       <li><%= message %></li>
@@ -46,7 +46,9 @@
   <ul>Body</ul>
   <%= f.text_area:body %>
   </div>
-  <ul><%= f.submit'Create book'%></ul>
+  <ul>
+    <%= f.submit'Create Book'%>
+  </ul>
 <% end %>
 
 </body>
